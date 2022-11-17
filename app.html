@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>House Price (in Bangalore) Prediction App</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="appTitile">
+        <h1>House Price Prediction App (for Bangalore City)</h1>
+      </div>
+      <ul class="navList">
+        <li class="navItem"><a href="">Home</a></li>
+      </ul>
+    </nav>
+    <div class="mainContainer">
+      <div class="formContainer">
+        <form action="" class="formClass">
+          <div class="formItem0">
+            <h2>Location of the house:</h2>
+            <select class="formField" id="locField">
+              <option value="Marathalli">Marathalli</option>
+              <option value="HSR">HSR Layout</option>
+            </select>
+          </div>
+          <div class="formItem1">
+            <h2>Total Area (in Sq ft)</h2>
+            <input
+              type="range"
+              step="50"
+              min="400"
+              max="30000"
+              value="1250"
+              class="formField"
+              id="areaSlider"
+            />
+            <!-- <p class="areaValue">1000</p> -->
+            <input
+              
+              type="number"
+              value="1250"
+              min="400"
+              max="30000"
+              class="formField"
+              id="areaField"
+            />
+          </div>
+          <div class="formItem">
+            <h2>No of BHK:</h2>
+            <input
+              type="number"
+              value="2"
+              min="1"
+              max="12"
+              class="formField"
+              id="bhkField"
+            />
+          </div>
+          <div class="formItem">
+            <h2>No of Bathrooms:</h2>
+            <input
+              type="number"
+              value="2"
+              min="1"
+              max="20"
+              class="formField"
+              id="bathField"
+            />
+          </div>
+          <div class="formItem">
+            <h2>No of Balcony:</h2>
+            <input
+              type="number"
+              value="1"
+              min="0"
+              max="15"
+              class="formField"
+              id="balcField"
+            />
+          </div>
+          <div class="formControls">
+            <button type="button" class="formButton" id="predPrice">
+              Predict Price
+            </button>
+            <button class="formButton" id="resetForm">Reset</button>
+          </div>
+          <div class="priceDisplay">
+            <!-- <hr width="100%" 
+            size="2" 
+            align="center"> -->
+            <p>The Estimated House Price is: <h2></h2> <span style="color:rgba(0, 0, 0, 0.6)">(in Lakh INR)</span></p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
