@@ -13,7 +13,8 @@ $(document).ready(function () {
     }
   } else {
     /* console.log("options loading from server", new Date()); */
-    var url_location = "/api/get_locations";
+    var url_location = process.env.APP_ENGINE_URL + "/get_locations";
+    //var url_location = "/api/get_locations";
     /* var url_location = "http://localhost:5000/get_locations"; */
     $.get(url_location, function (data, status) {
       if (data) {
@@ -68,7 +69,8 @@ $(document).ready(function () {
     ) {
       console.log("enter all input fields");
     } else {
-      var url_prediction = "/api/predict_house_price";
+      var url_prediction = process.env.APP_ENGINE_URL + "/predict_house_price";
+      /* var url_prediction = "/api/predict_house_price"; */
       /* var url_prediction = "http://localhost:5000/predict_house_price"; */
       $.post(
         url_prediction,
